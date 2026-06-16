@@ -1,0 +1,128 @@
+.organizer-events-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(20, 20, 30, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.25);
+  color: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 26px;
+  color: #00f0ff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+
+.event-card {
+  background: rgba(15, 15, 25, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+}
+
+.event-card h3 {
+  color: #00f0ff;
+  margin-bottom: 10px;
+}
+
+.status-badge {
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.status-draft { background: #ffcc00; color: #000; }
+.status-published { background: #00ff80; color: #000; }
+.status-ongoing { background: #0099ff; color: #fff; }
+.status-completed { background: #555; color: #fff; }
+.status-cancelled { background: #ff0040; color: #fff; }
+
+.volunteer-summary, .attendance-management, .performance-summary {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.volunteer-management {
+  margin-top: 15px;
+}
+
+.volunteer-management button {
+  margin-right: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ff00ff, #00f0ff);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.volunteer-list {
+  margin-top: 15px;
+  background: rgba(25, 25, 35, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.volunteer-item {
+  margin-bottom: 12px;
+}
+
+.volunteer-actions button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.reject-btn {
+  background: #ff0040;
+  color: #fff;
+}
+
+.event-actions {
+  margin-top: 15px;
+}
+
+.event-actions button {
+  margin-right: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ff00ff, #00f0ff);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #ff0040;
+  color: #fff;
+}
+.event-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.event-filters button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #1f2933;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.event-filters button.active {
+  background: linear-gradient(90deg, #00f5ff, #8b5cf6);
+  color: #000;
+  font-weight: bold;
+}

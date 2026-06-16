@@ -1,0 +1,143 @@
+/* ===============================
+   PAGE TITLE
+=============================== */
+.ad-content h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #67e8f9;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   CARD CONTAINER
+=============================== */
+.doc-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 10px;
+}
+
+/* ===============================
+   CARD
+=============================== */
+.doc-card {
+  background: rgba(15, 15, 25, 0.95);
+  border-radius: 16px;
+  padding: 18px;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.2);
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.doc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.35);
+}
+
+/* ===============================
+   CARD HEADER
+=============================== */
+.doc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.doc-header h3 {
+  font-size: 18px;
+  color: #67e8f9;
+  margin: 0;
+}
+
+/* ===============================
+   CARD TEXT
+=============================== */
+.doc-card p {
+  margin: 6px 0;
+  color: #ddd;
+  font-size: 14px;
+}
+
+/* ===============================
+   STATUS BADGES
+=============================== */
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.status-pending {
+  background: rgba(255, 215, 0, 0.2);
+  color: #ffd700;
+}
+
+.status-approved {
+  background: rgba(0, 255, 0, 0.2);
+  color: #00ff9c;
+}
+
+.status-rejected {
+  background: rgba(255, 0, 0, 0.2);
+  color: #ff4d4d;
+}
+
+/* ===============================
+   DOCUMENT LINK
+=============================== */
+.doc-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #67e8f9;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.doc-link:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   ACTION BUTTONS
+=============================== */
+.doc-actions {
+  margin-top: 14px;
+}
+
+.approve-btn,
+.reject-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 6px;
+  transition: 0.2s ease;
+}
+
+/* Approve */
+.approve-btn {
+  background: linear-gradient(90deg, #00ff9c, #00ffff);
+  color: #000;
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.6);
+}
+
+.approve-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Reject */
+.reject-btn {
+  background: linear-gradient(90deg, #ff4d4d, #ff0080);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 0, 80, 0.6);
+}
+
+.reject-btn:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,113 @@
+.create-event-container {
+  max-width: 800px;
+  margin: 30px auto;
+  background: rgba(20, 20, 30, 0.85);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.25);
+  color: #fff;
+}
+
+/* Title */
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #00f0ff;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+
+/* Sections */
+.create-event-form section {
+  margin-bottom: 25px;
+}
+
+.create-event-form h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ff00ff;
+  text-shadow: 0 0 6px rgba(255, 0, 255, 0.6);
+}
+
+/* Labels */
+.create-event-form label {
+  display: block;
+  margin: 8px 0 4px;
+  font-weight: 600;
+  color: #a7f3d0;
+}
+
+/* Inputs */
+.create-event-form input,
+.create-event-form select,
+.create-event-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 255, 0.35);
+  background: rgba(15, 15, 25, 0.95);
+  color: #e5e7eb;
+  font-size: 14px;
+  margin-bottom: 12px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* FIX: DATE & TIME TEXT COLOR */
+.create-event-form input[type="date"],
+.create-event-form input[type="time"] {
+  color: #00f0ff;
+  font-weight: 600;
+}
+
+/* FIX: Webkit date/time internal text */
+.create-event-form input[type="date"]::-webkit-datetime-edit,
+.create-event-form input[type="time"]::-webkit-datetime-edit {
+  color: #00f0ff;
+}
+
+/* FIX: Placeholder-like parts */
+.create-event-form input[type="date"]::-webkit-datetime-edit-text,
+.create-event-form input[type="date"]::-webkit-datetime-edit-month-field,
+.create-event-form input[type="date"]::-webkit-datetime-edit-day-field,
+.create-event-form input[type="date"]::-webkit-datetime-edit-year-field,
+.create-event-form input[type="time"]::-webkit-datetime-edit-hour-field,
+.create-event-form input[type="time"]::-webkit-datetime-edit-minute-field {
+  color: #00f0ff;
+}
+
+/* FIX: Calendar & clock icon */
+.create-event-form input[type="date"]::-webkit-calendar-picker-indicator,
+.create-event-form input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(1.2);
+  cursor: pointer;
+}
+
+/* Focus */
+.create-event-form input:focus,
+.create-event-form select:focus,
+.create-event-form textarea:focus {
+  outline: none;
+  border-color: #00f0ff;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.7);
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ff00ff, #00f0ff);
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 0 14px rgba(0, 255, 255, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
+}

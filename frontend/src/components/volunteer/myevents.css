@@ -1,0 +1,240 @@
+.my-events-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(20, 20, 30, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.25);
+  color: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 26px;
+  color: #00f0ff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-tabs button {
+  background: none;
+  border: 2px solid #00f0ff;
+  color: #00f0ff;
+  padding: 8px 16px;
+  margin: 0 4px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-tabs .active-tab {
+  background: #00f0ff;
+  color: #000;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.event-card {
+  background: rgba(15, 15, 25, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+}
+
+.event-card h3 {
+  color: #00f0ff;
+  margin-bottom: 6px;
+}
+
+/* ===== STATUS BADGES ===== */
+.status-badge {
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.status-pending {
+  background: #ffcc00;
+  color: #000;
+}
+
+.status-approved {
+  background: #00ff80;
+  color: #000;
+}
+
+.status-rejected {
+  background: #ff0040;
+  color: #fff;
+}
+
+.status-completed {
+  background: #0099ff;
+  color: #fff;
+}
+
+.status-cancelled {
+  background: #555;
+  color: #fff;
+}
+
+/* Optional text-only status colors (safe to keep) */
+.status.pending { color: orange; }
+.status.approved { color: lime; }
+.status.rejected { color: red; }
+
+/* ===== EVENT META ===== */
+.attendance-info {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.timeline {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.event-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.event-actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ff00ff, #00f0ff);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #ff0040;
+  color: #fff;
+}
+
+.empty-message {
+  text-align: center;
+  font-size: 16px;
+  color: #aaa;
+  margin-top: 40px;
+}
+
+/* ================================================= */
+/* ✅ FIX 1 — Event Header (Title + Time) */
+/* ================================================= */
+
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.event-datetime {
+  font-size: 13px;
+  color: #9aefff;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+/* ================================================= */
+/* ✅ FIX 2 — Mobile Support */
+/* ================================================= */
+
+@media (max-width: 600px) {
+  .event-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+.event-card {
+  position: relative;
+}
+
+.event-date-time {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 14px;
+  color: #7dd3fc;
+  font-weight: 500;
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #0b0f1a;
+  color: #ffffff;
+  width: 75%;
+  max-height: 85%;
+  overflow-y: auto;
+  border-radius: 18px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 0 30px #00f7ff;
+}
+
+.modal-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00f7ff;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-section {
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.modal-section h3 {
+  margin-bottom: 10px;
+  color: #00f7ff;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #00f7ff;
+  text-decoration: none;
+}

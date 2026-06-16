@@ -1,0 +1,79 @@
+.edit-event-page {
+  padding: 30px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.edit-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+}
+
+.edit-form {
+  background: rgba(15, 23, 42, 0.9);
+  padding: 25px;
+  border-radius: 18px;
+  max-width: 650px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.25);
+}
+
+.edit-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.edit-form input,
+.edit-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #111827;
+  color: cyan;
+  font-size: 14px;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.row div {
+  flex: 1;
+}
+
+.btn-group {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.save-btn {
+  background: cyan;
+  color: black;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.back-btn {
+  background: red;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.save-btn:hover,
+.back-btn:hover {
+  opacity: 0.8;
+}

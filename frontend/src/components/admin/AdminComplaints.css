@@ -1,0 +1,102 @@
+.admin-complaints-page {
+  color: #fff;
+}
+
+.complaints-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #67e8f9;
+}
+
+.complaints-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* Complaint Card */
+.complaint-card {
+  background: rgba(20, 20, 30, 0.9);
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.25);
+  transition: 0.25s ease;
+}
+
+.complaint-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 26px rgba(255, 0, 255, 0.4);
+}
+
+.complaint-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.ticket-id {
+  font-weight: 800;
+  color: #00ffff;
+}
+
+.role {
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #000;
+  font-weight: 700;
+}
+
+.subject {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #fff;
+}
+
+.message {
+  font-size: 14px;
+  color: #cbd5e1;
+  margin-bottom: 12px;
+}
+
+.complaint-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status {
+  font-weight: 700;
+}
+
+.status.pending {
+  color: #f59e0b;
+}
+
+.status.resolved {
+  color: #22c55e;
+}
+
+.resolve-btn {
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.resolve-btn:hover {
+  transform: scale(1.05);
+}
+
+.date {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #94a3b8;
+}

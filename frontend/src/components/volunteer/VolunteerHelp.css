@@ -1,0 +1,103 @@
+.help-container {
+  padding: 30px;
+  color: white;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  min-height: 100vh;
+}
+
+.help-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #00f7ff;
+}
+
+.help-subtitle {
+  color: #cbd5f5;
+  margin-bottom: 25px;
+}
+
+/* Card Style */
+.help-card {
+  background: #0b1120;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+/* FAQ */
+.faq-list {
+  list-style: none;
+  padding: 0;
+}
+
+.faq-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #1f2937;
+}
+
+/* Form */
+.support-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.support-form select,
+.support-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #020617;
+  color: white;
+}
+
+.support-form textarea {
+  min-height: 100px;
+}
+
+.submit-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ff00cc, #00f7ff);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Ticket Table */
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ticket-table th,
+.ticket-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #1f2937;
+}
+
+.ticket-table th {
+  color: #00f7ff;
+}
+
+/* Status colors */
+.status.pending {
+  color: orange;
+}
+
+.status.in_progress {
+  color: #00f7ff;
+}
+
+.status.resolved {
+  color: #00ff88;
+}

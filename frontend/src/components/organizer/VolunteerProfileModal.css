@@ -1,0 +1,70 @@
+/* ================= MODAL BACKDROP ================= */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* ================= MODAL CARD ================= */
+.modal-card {
+  background: #0b1220;
+  padding: 24px;
+  width: 520px;
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: 16px;
+  color: #ffffff;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  margin-bottom: 16px;
+}
+
+.section h4 {
+  color: #22d3ee;
+  margin-bottom: 8px;
+}
+
+/* ================= SKILLS ================= */
+.skill-group {
+  margin-bottom: 12px;
+}
+
+.skill-group h5 {
+  color: #38fdfd;
+  margin-bottom: 6px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #22d3ee, #8b5cf6);
+  color: #000;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* ================= CLOSE BUTTON ================= */
+.close-btn {
+  margin-top: 16px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #22d3ee, #8b5cf6);
+  color: #000;
+  font-weight: 800;
+  cursor: pointer;
+}

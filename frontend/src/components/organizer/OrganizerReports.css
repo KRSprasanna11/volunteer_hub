@@ -1,0 +1,135 @@
+.reports-page {
+  padding: 30px;
+  color: white;
+}
+
+.reports-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: cyan;
+}
+
+.reports-summary {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.report-card {
+  background: #111827;
+  padding: 20px;
+  width: 200px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px cyan;
+}
+
+.report-card h3 {
+  font-size: 18px;
+}
+
+.report-card p {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.reports-section {
+  margin-top: 30px;
+}
+
+.reports-grid {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.mini-card {
+  flex: 1;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  background: #1f2937;
+}
+
+.mini-card p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.approved {
+  border: 2px solid lime;
+}
+
+.pending {
+  border: 2px solid orange;
+}
+
+.rejected {
+  border: 2px solid red;
+}
+
+.present {
+  border: 2px solid lime;
+}
+
+.absent {
+  border: 2px solid red;
+}
+
+.percent {
+  border: 2px solid cyan;
+}
+
+.rating {
+  border: 2px solid gold;
+}
+
+.feedback-box {
+  margin-top: 20px;
+  background: #111;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.feedback-box p {
+  margin: 8px 0;
+}
+/* ================= FILTER DROPDOWN STYLE ================= */
+
+.filter-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.filter-dropdown label {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+.filter-dropdown select {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 2px solid #00f7ff;
+  background: #111827;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Hover Effect */
+.filter-dropdown select:hover {
+  border-color: #ff00ff;
+}
+
+/* Focus Glow */
+.filter-dropdown select:focus {
+  box-shadow: 0 0 10px #00f7ff;
+}
