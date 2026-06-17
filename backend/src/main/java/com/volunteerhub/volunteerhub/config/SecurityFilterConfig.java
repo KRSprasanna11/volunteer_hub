@@ -30,8 +30,8 @@ public class SecurityFilterConfig {
                                 "/api/notifications/**",
                                 "/api/admin/**",
                                 "/api/support/**",
-                                "/api/documents/**",   // ✅ document APIs
-                                "/uploads/**"          // ✅ allow uploaded files
+                                "/api/documents/**",
+                                "/uploads/**"
                         ).permitAll()
                         .anyRequest().permitAll()
                 )
@@ -41,23 +41,35 @@ public class SecurityFilterConfig {
         return http.build();
     }
 
-    // ✅ Proper CORS configuration for Spring Security
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
+
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("http://localhost:3001"));
-        config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+
+        config.setAllowedOrigins(List.of(
+                "http://localhost:3001",
+                "https://volunteer-hub-roan.vercel.app"
+        ));
+
+        config.setAllowedMethods(List.of(
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE",
+                "OPTIONS"
+        ));
+
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source =
                 new UrlBasedCorsConfigurationSource();
+
         source.registerCorsConfiguration("/**", config);
 
         return source;
     }
 
-    // 🔐 Password encoder
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
