@@ -78,13 +78,13 @@ const VolunteerProfileModal = ({ volunteerId, onClose }) => {
 
     // 🔹 BASIC PROFILE
     axios
-      .get(`http://localhost:8080/api/users/volunteer/${volunteerId}`)
+      .get(`http://https://volunteer-hub-jp64.onrender.com/api/users/volunteer/${volunteerId}`)
       .then((res) => setBasic(res.data))
       .catch(() => console.error("Failed to load basic profile"));
 
     // 🔹 EXTRA PROFILE + SKILLS
     axios
-      .get(`http://localhost:8080/api/volunteer/profile/${volunteerId}`)
+      .get(`http://https://volunteer-hub-jp64.onrender.com/api/volunteer/profile/${volunteerId}`)
       .then((res) => {
         setExtra(res.data || {});
         setSkills(res.data?.skills || []);

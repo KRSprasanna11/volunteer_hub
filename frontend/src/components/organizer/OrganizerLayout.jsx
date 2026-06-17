@@ -20,7 +20,7 @@ const OrganizerLayout = () => {
 
     axios
       .get(
-        `http://localhost:8080/api/notifications/organizer/${user.id}/unread-count`
+        `http://https://volunteer-hub-jp64.onrender.com/api/notifications/organizer/${user.id}/unread-count`
       )
       .then((res) => setUnreadCount(res.data))
       .catch(() => setUnreadCount(0));
@@ -36,7 +36,7 @@ const OrganizerLayout = () => {
     const fetchUnread = () => {
       axios
         .get(
-          `http://localhost:8080/api/notifications/organizer/${user.id}/unread-count`
+          `http://https://volunteer-hub-jp64.onrender.com/api/notifications/organizer/${user.id}/unread-count`
         )
         .then((res) => setUnreadCount(res.data))
         .catch(() => {});
@@ -72,7 +72,7 @@ const OrganizerLayout = () => {
 
         axios
           .put(
-            `http://localhost:8080/api/notifications/organizer/${user.id}/mark-read`
+            `http://https://volunteer-hub-jp64.onrender.com/api/notifications/organizer/${user.id}/mark-read`
           )
           .then(() => setUnreadCount(0))
           .catch(() => {});

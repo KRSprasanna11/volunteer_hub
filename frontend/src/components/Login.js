@@ -17,7 +17,7 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/auth/login",
+        "http://https://volunteer-hub-jp64.onrender.com/api/auth/login",
         { email, password }
       );
 
@@ -33,7 +33,7 @@ const Login = () => {
       if (user.role !== "ADMIN") {
         try {
           const statusRes = await axios.get(
-            "http://localhost:8080/api/documents/status",
+            "http://https://volunteer-hub-jp64.onrender.com/api/documents/status",
             {
               params: {
                 userId: user.id,

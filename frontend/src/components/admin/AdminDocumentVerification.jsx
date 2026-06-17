@@ -10,7 +10,7 @@ const AdminDocumentVerification = () => {
   const fetchDocuments = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8080/api/documents/admin/all"
+        "http://https://volunteer-hub-jp64.onrender.com/api/documents/admin/all"
       );
       setDocuments(res.data);
     } catch (err) {
@@ -26,7 +26,7 @@ const AdminDocumentVerification = () => {
   const approve = async (id) => {
     try {
       await axios.put(
-        `http://localhost:8080/api/documents/admin/${id}/approve`
+        `http://https://volunteer-hub-jp64.onrender.com/api/documents/admin/${id}/approve`
       );
       fetchDocuments();
     } catch (err) {
@@ -38,7 +38,7 @@ const AdminDocumentVerification = () => {
   const reject = async (id) => {
     try {
       await axios.put(
-        `http://localhost:8080/api/documents/admin/${id}/reject`
+        `http://https://volunteer-hub-jp64.onrender.com/api/documents/admin/${id}/reject`
       );
       fetchDocuments();
     } catch (err) {
@@ -74,7 +74,7 @@ const AdminDocumentVerification = () => {
 
               <a
                 className="doc-link"
-                href={`http://localhost:8080${doc.documentUrl}`}
+                href={`http://https://volunteer-hub-jp64.onrender.com${doc.documentUrl}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -14,7 +14,7 @@ const OrganizerNotifications = ({ refreshKey }) => {
 
     axios
       .get(
-        `http://localhost:8080/api/notifications/organizer/${user.id}`
+        `http://https://volunteer-hub-jp64.onrender.com/api/notifications/organizer/${user.id}`
       )
       .then((res) => setNotifications(res.data))
       .catch(() => setNotifications([]));
@@ -23,7 +23,7 @@ const OrganizerNotifications = ({ refreshKey }) => {
   // 🗑 DELETE SINGLE NOTIFICATION
   const deleteSingleNotification = (id) => {
     axios
-      .delete(`http://localhost:8080/api/notifications/${id}`)
+      .delete(`http://https://volunteer-hub-jp64.onrender.com/api/notifications/${id}`)
       .then(() => {
         setNotifications((prev) =>
           prev.filter((n) => n.id !== id)

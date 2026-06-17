@@ -19,7 +19,7 @@ const ChatBot = () => {
     setMessages(prev => [...prev, userMsg]);
 
     try {
-      const res = await axios.post("http://localhost:8080/api/chat", {
+      const res = await axios.post("http://https://volunteer-hub-jp64.onrender.com/api/chat", {
         message: text
       });
 
@@ -44,7 +44,7 @@ const ChatBot = () => {
     setMessages(prev => [...prev, userMsg]);
 
     try {
-      const res = await axios.post("http://localhost:8080/api/chat", {
+      const res = await axios.post("http://https://volunteer-hub-jp64.onrender.com/api/chat", {
         message: message
       });
 
