@@ -13,7 +13,7 @@ const Register = () => {
 
   const handleRegister = async () => {
     try {
-      await axios.post("http://https://volunteer-hub-jp64.onrender.com/api/auth/register", {
+      await axios.post("https://volunteer-hub-jp64.onrender.com/api/auth/register", {
         name,
         email,
         password,
@@ -26,7 +26,7 @@ const Register = () => {
       // 🔐 AUTO LOGIN AFTER REGISTER (NEW)
       // ==================================================
       const loginRes = await axios.post(
-        "http://https://volunteer-hub-jp64.onrender.com/api/auth/login",
+        "https://volunteer-hub-jp64.onrender.com/api/auth/login",
         { email, password }
       );
 

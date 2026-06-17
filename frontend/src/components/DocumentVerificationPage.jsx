@@ -19,7 +19,7 @@ const DocumentVerificationPage = () => {
 
     try {
       const res = await axios.get(
-        `http://https://volunteer-hub-jp64.onrender.com/api/documents/status`,
+        `https://volunteer-hub-jp64.onrender.com/api/documents/status`,
         {
           params: { userId, role },
         }
@@ -64,7 +64,7 @@ const DocumentVerificationPage = () => {
       }
 
       await axios.post(
-        `http://https://volunteer-hub-jp64.onrender.com/api/documents/upload`,
+        `https://volunteer-hub-jp64.onrender.com/api/documents/upload`,
         formData,
         {
           headers: {

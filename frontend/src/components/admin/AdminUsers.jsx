@@ -12,7 +12,7 @@ const AdminUsers = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await fetch("http://https://volunteer-hub-jp64.onrender.com/api/admin/users");
+      const res = await fetch("https://volunteer-hub-jp64.onrender.com/api/admin/users");
       const data = await res.json();
       setUsers(data);
     } catch (err) {
@@ -24,7 +24,7 @@ const AdminUsers = () => {
 
   const updateStatus = async (id, status) => {
     await fetch(
-      `http://https://volunteer-hub-jp64.onrender.com/api/admin/users/${id}/status?status=${status}`,
+      `https://volunteer-hub-jp64.onrender.com/api/admin/users/${id}/status?status=${status}`,
       { method: "PUT" }
     );
     fetchUsers();

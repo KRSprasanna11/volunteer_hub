@@ -37,7 +37,7 @@ const OrganizerMyEvents = () => {
     if (!organizerId) return;
 
     axios
-      .get(`http://https://volunteer-hub-jp64.onrender.com/api/events/organizer/${organizerId}`)
+      .get(`https://volunteer-hub-jp64.onrender.com/api/events/organizer/${organizerId}`)
       .then((res) => setEvents(res.data))
       .catch((err) => {
         console.error(err);
@@ -57,7 +57,7 @@ const OrganizerMyEvents = () => {
 
         for (let event of events) {
           const res = await axios.get(
-            `http://https://volunteer-hub-jp64.onrender.com/api/applications/event/${event.id}`
+            `https://volunteer-hub-jp64.onrender.com/api/applications/event/${event.id}`
           );
 
           allApps[event.id] = res.data;
@@ -83,7 +83,7 @@ const OrganizerMyEvents = () => {
 
     try {
       const res = await axios.get(
-        `http://https://volunteer-hub-jp64.onrender.com/api/applications/event/${eventId}`
+        `https://volunteer-hub-jp64.onrender.com/api/applications/event/${eventId}`
       );
 
       setApplications((prev) => ({
@@ -102,7 +102,7 @@ const OrganizerMyEvents = () => {
   // ==================================================
   const approve = async (applicationId, eventId) => {
     await axios.put(
-      `http://https://volunteer-hub-jp64.onrender.com/api/applications/${applicationId}/status`,
+      `https://volunteer-hub-jp64.onrender.com/api/applications/${applicationId}/status`,
       null,
       { params: { status: "APPROVED" } }
     );
@@ -111,7 +111,7 @@ const OrganizerMyEvents = () => {
 
     // Refresh Applications List
     const res = await axios.get(
-      `http://https://volunteer-hub-jp64.onrender.com/api/applications/event/${eventId}`
+      `https://volunteer-hub-jp64.onrender.com/api/applications/event/${eventId}`
     );
 
     setApplications((prev) => ({
@@ -125,7 +125,7 @@ const OrganizerMyEvents = () => {
   // ==================================================
   const reject = async (applicationId, eventId) => {
     await axios.put(
-      `http://https://volunteer-hub-jp64.onrender.com/api/applications/${applicationId}/status`,
+      `https://volunteer-hub-jp64.onrender.com/api/applications/${applicationId}/status`,
       null,
       { params: { status: "REJECTED" } }
     );
@@ -134,7 +134,7 @@ const OrganizerMyEvents = () => {
 
     // Refresh Applications List
     const res = await axios.get(
-      `http://https://volunteer-hub-jp64.onrender.com/api/applications/event/${eventId}`
+      `https://volunteer-hub-jp64.onrender.com/api/applications/event/${eventId}`
     );
 
     setApplications((prev) => ({
@@ -150,7 +150,7 @@ const OrganizerMyEvents = () => {
     if (!window.confirm("Are you sure you want to cancel this event?")) return;
 
     try {
-      await axios.put(`http://https://volunteer-hub-jp64.onrender.com/api/events/${eventId}/cancel`);
+      await axios.put(`https://volunteer-hub-jp64.onrender.com/api/events/${eventId}/cancel`);
 
       alert("Event Cancelled Successfully!");
 

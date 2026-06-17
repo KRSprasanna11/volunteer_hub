@@ -25,7 +25,7 @@ const EditEvent = () => {
   // ✅ Load Event Details
   useEffect(() => {
     axios
-      .get(`http://https://volunteer-hub-jp64.onrender.com/api/events`)
+      .get(`https://volunteer-hub-jp64.onrender.com/api/events`)
       .then((res) => {
         const found = res.data.find((ev) => ev.id === Number(id));
 
@@ -49,7 +49,7 @@ const EditEvent = () => {
     e.preventDefault();
 
     axios
-      .put(`http://https://volunteer-hub-jp64.onrender.com/api/events/${id}`, eventData)
+      .put(`https://volunteer-hub-jp64.onrender.com/api/events/${id}`, eventData)
       .then(() => {
         alert("Event Updated Successfully!");
         navigate("/organizer/my-events"); // ✅ Back to My Events

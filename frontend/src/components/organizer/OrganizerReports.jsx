@@ -26,7 +26,7 @@ const OrganizerReports = () => {
     if (!user?.id) return;
 
     axios
-      .get(`http://https://volunteer-hub-jp64.onrender.com/api/reports/organizer/${user.id}`)
+      .get(`https://volunteer-hub-jp64.onrender.com/api/reports/organizer/${user.id}`)
       .then((res) => {
         setSummaryReport(res.data); // ✅ Top Cards Fixed
         setReport(res.data);        // Default view
@@ -41,7 +41,7 @@ const OrganizerReports = () => {
     if (!user?.id) return;
 
     axios
-      .get(`http://https://volunteer-hub-jp64.onrender.com/api/events/organizer/${user.id}`)
+      .get(`https://volunteer-hub-jp64.onrender.com/api/events/organizer/${user.id}`)
       .then((res) => setEvents(res.data))
       .catch((err) => console.log("Event Load Error:", err));
   }, [user?.id]);
@@ -54,8 +54,8 @@ const OrganizerReports = () => {
 
     let url =
       selectedEventId === "ALL"
-        ? `http://https://volunteer-hub-jp64.onrender.com/api/reports/organizer/${user.id}`
-        : `http://https://volunteer-hub-jp64.onrender.com/api/reports/organizer/${user.id}/event/${selectedEventId}`;
+        ? `https://volunteer-hub-jp64.onrender.com/api/reports/organizer/${user.id}`
+        : `https://volunteer-hub-jp64.onrender.com/api/reports/organizer/${user.id}/event/${selectedEventId}`;
 
     axios
       .get(url)

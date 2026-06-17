@@ -102,7 +102,7 @@ const VolunteerProfile = () => {
     if (!user?.id) return;
 
     axios
-      .get(`http://https://volunteer-hub-jp64.onrender.com/api/users/volunteer/${user.id}`)
+      .get(`https://volunteer-hub-jp64.onrender.com/api/users/volunteer/${user.id}`)
       .then((res) => {
         const data = {
           name: res.data.name || "",
@@ -120,7 +120,7 @@ const VolunteerProfile = () => {
     if (!user?.id) return;
 
     axios
-      .get(`http://https://volunteer-hub-jp64.onrender.com/api/volunteer/profile/${user.id}`)
+      .get(`https://volunteer-hub-jp64.onrender.com/api/volunteer/profile/${user.id}`)
       .then((res) => {
         setExtraProfile({
           occupation: res.data.occupation || "",
@@ -152,7 +152,7 @@ const VolunteerProfile = () => {
   /* ================= SAVE BASIC PROFILE ================= */
   const saveProfile = () => {
     axios
-      .put(`http://https://volunteer-hub-jp64.onrender.com/api/users/volunteer/${user.id}`, {
+      .put(`https://volunteer-hub-jp64.onrender.com/api/users/volunteer/${user.id}`, {
         name: profile.name,
         phone: profile.phone,
       })
@@ -173,7 +173,7 @@ const VolunteerProfile = () => {
   const updateVolunteerProfile = async () => {
     try {
       await axios.put(
-        `http://https://volunteer-hub-jp64.onrender.com/api/volunteer/profile/${user.id}`,
+        `https://volunteer-hub-jp64.onrender.com/api/volunteer/profile/${user.id}`,
         {
           ...extraProfile,
 

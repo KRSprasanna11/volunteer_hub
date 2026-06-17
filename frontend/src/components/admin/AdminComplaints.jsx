@@ -7,7 +7,7 @@ const AdminComplaints = () => {
 
   const fetchTickets = async () => {
     try {
-      const res = await axios.get("http://https://volunteer-hub-jp64.onrender.com/api/support/all");
+      const res = await axios.get("https://volunteer-hub-jp64.onrender.com/api/support/all");
       setTickets(res.data);
     } catch (err) {
       console.error("Error fetching tickets", err);
@@ -20,7 +20,7 @@ const AdminComplaints = () => {
 
   const resolveTicket = async (id) => {
     try {
-      await axios.put(`http://https://volunteer-hub-jp64.onrender.com/api/support/${id}/resolve`);
+      await axios.put(`https://volunteer-hub-jp64.onrender.com/api/support/${id}/resolve`);
       fetchTickets();
     } catch (err) {
       console.error("Error resolving ticket", err);

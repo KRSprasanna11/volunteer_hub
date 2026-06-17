@@ -23,7 +23,7 @@ const OrganizerAttendance = () => {
     if (!user?.id) return;
 
     axios
-      .get(`http://https://volunteer-hub-jp64.onrender.com/api/events/organizer/${user.id}`)
+      .get(`https://volunteer-hub-jp64.onrender.com/api/events/organizer/${user.id}`)
       .then((res) => setEvents(res.data))
       .catch((err) => console.log("Event Load Error:", err));
   }, [user?.id]);
@@ -36,8 +36,8 @@ const OrganizerAttendance = () => {
 
     let url =
       selectedEventId === "ALL"
-        ? `http://https://volunteer-hub-jp64.onrender.com/api/applications/organizer/${user.id}`
-        : `http://https://volunteer-hub-jp64.onrender.com/api/applications/event/${selectedEventId}`;
+        ? `https://volunteer-hub-jp64.onrender.com/api/applications/organizer/${user.id}`
+        : `https://volunteer-hub-jp64.onrender.com/api/applications/event/${selectedEventId}`;
 
     axios
       .get(url)
@@ -87,7 +87,7 @@ const OrganizerAttendance = () => {
   const markAttendance = (id, status) => {
     axios
       .put(
-        `http://https://volunteer-hub-jp64.onrender.com/api/applications/attendance/${id}?status=${status}`
+        `https://volunteer-hub-jp64.onrender.com/api/applications/attendance/${id}?status=${status}`
       )
       .then(() => {
         alert("Attendance Updated Successfully!");
@@ -111,13 +111,13 @@ const OrganizerAttendance = () => {
 
     try {
       const res = await axios.get(
-        `http://https://volunteer-hub-jp64.onrender.com/api/certificates/generate?volunteerId=${volunteerId}&eventId=${eventId}&reference=${reference}`
+        `https://volunteer-hub-jp64.onrender.com/api/certificates/generate?volunteerId=${volunteerId}&eventId=${eventId}&reference=${reference}`
       );
 
       alert("✅ Certificate Issued Successfully!");
 
       window.open(
-        `http://https://volunteer-hub-jp64.onrender.com/api/certificates/download/${res.data.id}`,
+        `https://volunteer-hub-jp64.onrender.com/api/certificates/download/${res.data.id}`,
         "_blank"
       );
 

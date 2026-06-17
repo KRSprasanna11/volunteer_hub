@@ -23,7 +23,7 @@ const VolunteerHistory = () => {
     const user = JSON.parse(storedUser);
 
     axios
-      .get(`http://https://volunteer-hub-jp64.onrender.com/api/applications/volunteer/${user.id}/history`)
+      .get(`https://volunteer-hub-jp64.onrender.com/api/applications/volunteer/${user.id}/history`)
       .then((res) => setHistory(res.data))
       .catch((err) => console.error(err));
   }, []);
@@ -37,7 +37,7 @@ const VolunteerHistory = () => {
 
     try {
       const res = await axios.post(
-        "http://https://volunteer-hub-jp64.onrender.com/api/feedback/submit",
+        "https://volunteer-hub-jp64.onrender.com/api/feedback/submit",
         {
           eventId: selectedEvent.eventId,
           volunteerId: user.id,

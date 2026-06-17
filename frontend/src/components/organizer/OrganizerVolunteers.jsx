@@ -19,7 +19,7 @@ const OrganizerVolunteers = () => {
     const controller = new AbortController();
 
     axios
-      .get(`http://https://volunteer-hub-jp64.onrender.com/api/events/organizer/${user.id}`, {
+      .get(`https://volunteer-hub-jp64.onrender.com/api/events/organizer/${user.id}`, {
         signal: controller.signal,
       })
       .then((res) => setEvents(res.data))
@@ -36,8 +36,8 @@ const OrganizerVolunteers = () => {
 
     const url =
       selectedEventId === "ALL"
-        ? `http://https://volunteer-hub-jp64.onrender.com/api/applications/organizer/${user.id}`
-        : `http://https://volunteer-hub-jp64.onrender.com/api/applications/event/${selectedEventId}`;
+        ? `https://volunteer-hub-jp64.onrender.com/api/applications/organizer/${user.id}`
+        : `https://volunteer-hub-jp64.onrender.com/api/applications/event/${selectedEventId}`;
 
     axios
       .get(url)
@@ -55,7 +55,7 @@ const OrganizerVolunteers = () => {
   const updateStatus = (id, status) => {
     axios
       .put(
-        `http://https://volunteer-hub-jp64.onrender.com/api/applications/${id}/${status.toLowerCase()}`
+        `https://volunteer-hub-jp64.onrender.com/api/applications/${id}/${status.toLowerCase()}`
       )
       .then(() => {
         alert(`Volunteer ${status} Successfully!`);
@@ -74,7 +74,7 @@ const OrganizerVolunteers = () => {
       return;
 
     axios
-      .put(`http://https://volunteer-hub-jp64.onrender.com/api/applications/${id}/remove`)
+      .put(`https://volunteer-hub-jp64.onrender.com/api/applications/${id}/remove`)
       .then(() => {
         alert("Volunteer Removed Successfully!");
 

@@ -19,7 +19,7 @@ const VolunteerCertificates = () => {
     if (!user?.id) return;
 
     axios
-      .get(`http://https://volunteer-hub-jp64.onrender.com/api/certificates/volunteer/${user.id}`)
+      .get(`https://volunteer-hub-jp64.onrender.com/api/certificates/volunteer/${user.id}`)
       .then((res) => {
         setCertificates(res.data);
       })
@@ -74,7 +74,7 @@ const VolunteerCertificates = () => {
                 className="download-btn"
                 onClick={() =>
                   window.open(
-                    `http://https://volunteer-hub-jp64.onrender.com/api/certificates/download/${cert.id}`,
+                    `https://volunteer-hub-jp64.onrender.com/api/certificates/download/${cert.id}`,
                     "_blank"
                   )
                 }

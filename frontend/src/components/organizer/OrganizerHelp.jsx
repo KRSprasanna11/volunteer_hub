@@ -22,7 +22,7 @@ const OrganizerHelp = () => {
 
     axios
       .get(
-        `http://https://volunteer-hub-jp64.onrender.com/api/support/user?userId=${user.id}&userRole=ORGANIZER`
+        `https://volunteer-hub-jp64.onrender.com/api/support/user?userId=${user.id}&userRole=ORGANIZER`
       )
       .then((res) => setTickets(res.data))
       .catch((err) => console.error(err));
@@ -45,7 +45,7 @@ const OrganizerHelp = () => {
     if (!user) return;
 
     axios
-      .post("http://https://volunteer-hub-jp64.onrender.com/api/support/create", {
+      .post("https://volunteer-hub-jp64.onrender.com/api/support/create", {
         userId: user.id,
         userRole: "ORGANIZER",
         subject: form.subject,

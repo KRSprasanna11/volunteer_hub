@@ -23,7 +23,7 @@ const AvailableEvents = () => {
 
   const loadEvents = async () => {
     try {
-      const res = await axios.get("http://https://volunteer-hub-jp64.onrender.com/api/events/available");
+      const res = await axios.get("https://volunteer-hub-jp64.onrender.com/api/events/available");
       setEvents(res.data);
     } catch (err) {
       console.error("Error fetching events:", err);
@@ -33,7 +33,7 @@ const AvailableEvents = () => {
   const loadApplications = async () => {
     try {
       const res = await axios.get(
-        `http://https://volunteer-hub-jp64.onrender.com/api/applications/volunteer/${volunteerId}`
+        `https://volunteer-hub-jp64.onrender.com/api/applications/volunteer/${volunteerId}`
       );
       setApplications(res.data);
     } catch (err) {
@@ -118,7 +118,7 @@ const AvailableEvents = () => {
 
     try {
       const res = await axios.post(
-        "http://https://volunteer-hub-jp64.onrender.com/api/applications/apply",
+        "https://volunteer-hub-jp64.onrender.com/api/applications/apply",
         null,
         {
           params: {

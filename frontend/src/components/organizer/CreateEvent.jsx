@@ -76,7 +76,7 @@ const CreateEvent = () => {
 
     try {
       await axios.post(
-        "http://https://volunteer-hub-jp64.onrender.com/api/events",
+        "https://volunteer-hub-jp64.onrender.com/api/events",
         payload,
         { headers: { "Content-Type": "application/json" } }
       );

@@ -20,7 +20,7 @@ const MyEvents = () => {
     const user = JSON.parse(storedUser);
 
     axios
-      .get(`http://https://volunteer-hub-jp64.onrender.com/api/applications/volunteer/${user.id}/events`)
+      .get(`https://volunteer-hub-jp64.onrender.com/api/applications/volunteer/${user.id}/events`)
       .then((res) => setEvents(res.data))
       .catch((err) => console.error(err));
   }, []);
@@ -33,7 +33,7 @@ const MyEvents = () => {
     if (!window.confirm("Are you sure you want to cancel?")) return;
 
     try {
-      await axios.put("http://https://volunteer-hub-jp64.onrender.com/api/applications/cancel", null, {
+      await axios.put("https://volunteer-hub-jp64.onrender.com/api/applications/cancel", null, {
         params: {
           volunteerId: user.id,
           eventId,
@@ -57,7 +57,7 @@ const MyEvents = () => {
 
     try {
       const res = await axios.post(
-        "http://https://volunteer-hub-jp64.onrender.com/api/feedback/submit",
+        "https://volunteer-hub-jp64.onrender.com/api/feedback/submit",
         {
           eventId: feedbackEvent.eventId,
           volunteerId: user.id,
